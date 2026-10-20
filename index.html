@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Guruji Restaurant. Discover delicious Indian food, biryani, dosa and more.">
+  <title>Guruji Restaurant | Taste of Tradition</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#home" class="logo">
+      <span class="logo-icon">✦</span>
+      <span>GURUJI <small>RESTAURANT</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#menu">Our Menu</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-button" id="cartButton">
+      🛒 Cart <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">WELCOME TO GURUJI</span>
+        <h1>Good Food.<br><span>Great Memories.</span></h1>
+        <p>Discover the authentic taste of India. Fresh ingredients, traditional recipes and love in every bite.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">Explore Our Menu ↗</a>
+          <a href="#about" class="btn btn-outline">Our Story</a>
+        </div>
+        <div class="hero-note">
+          <span>✦ Freshly prepared</span>
+          <span>✦ Made with love</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1000&q=85" alt="Delicious Indian curry and traditional food">
+        <div class="image-label">
+          <span>✦</span>
+          <div><strong>Authentic Flavours</strong><small>A taste worth remembering</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <div><span>🥬</span><strong>Fresh Ingredients</strong><small>Quality in every bite</small></div>
+      <div><span>👨‍🍳</span><strong>Expert Chefs</strong><small>Prepared with care</small></div>
+      <div><span>🍛</span><strong>Authentic Recipes</strong><small>Traditional Indian taste</small></div>
+      <div><span>❤️</span><strong>Made with Love</strong><small>Food that brings joy</small></div>
+    </section>
+
+    <section class="menu-section section" id="menu">
+      <div class="section-heading">
+        <span class="eyebrow">OUR SPECIALITIES</span>
+        <h2>Explore Our <span>Delicious Menu</span></h2>
+        <p>From traditional favourites to irresistible treats, find your next favourite dish.</p>
+      </div>
+
+      <div class="menu-tools">
+        <div class="filters" id="filters">
+          <button class="filter active" data-category="All">All Items</button>
+          <button class="filter" data-category="Starters">Starters</button>
+          <button class="filter" data-category="Main Course">Main Course</button>
+          <button class="filter" data-category="Biryani">Biryani</button>
+          <button class="filter" data-category="Desserts">Desserts</button>
+          <button class="filter" data-category="Drinks">Drinks</button>
+        </div>
+        <input type="search" id="foodSearch" placeholder="🔍 Search dishes..." aria-label="Search food">
+      </div>
+
+      <div class="food-grid" id="foodGrid"></div>
+      <p id="emptyMessage" class="empty-message" hidden>No dishes found. Try another search!</p>
+    </section>
+
+    <section class="offer">
+      <div>
+        <span class="eyebrow">A LITTLE EXTRA HAPPINESS</span>
+        <h2>Great food makes<br>every moment special.</h2>
+        <p>Gather your favourite people and enjoy the flavours you love.</p>
+        <a href="#menu" class="btn btn-light">Find Your Favourite Dish ↗</a>
+      </div>
+      <div class="offer-emoji">🍲</div>
+    </section>
+
+    <section class="about-section section" id="about">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85" alt="Warm and welcoming restaurant interior">
+      </div>
+      <div class="about-content">
+        <span class="eyebrow">OUR STORY</span>
+        <h2>More Than Food,<br><span>It's an Experience.</span></h2>
+        <p>At Guruji Restaurant, we believe that great food brings people together. Our menu celebrates the richness of Indian cuisine, combining familiar favourites with flavours that make every meal memorable.</p>
+        <p>Whether you're enjoying a family dinner, catching up with friends or treating yourself, there's always something delicious waiting for you.</p>
+        <a href="#menu" class="text-link">Discover Our Menu ↗</a>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contact">
+      <div class="section-heading">
+        <span class="eyebrow">GET IN TOUCH</span>
+        <h2>We'd Love to <span>Hear From You</span></h2>
+        <p>Questions, feedback or a special request? Send us a message.</p>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <div class="form-row">
+          <input type="text" id="customerName" placeholder="Your name" required>
+          <input type="email" id="customerEmail" placeholder="Your email" required>
+        </div>
+        <textarea id="customerMessage" placeholder="Write your message..." rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message ↗</button>
+        <p id="contactFeedback" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="logo footer-logo">✦ GURUJI <small>RESTAURANT</small></a>
+    <p>Authentic flavours. Beautiful moments. Made with love.</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <small>© <span id="year"></span> Guruji Restaurant. All rights reserved.</small>
+  </footer>
+
+  <!-- Shopping cart panel -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Your Cart 🛒</h2>
+      <button id="closeCart" class="close-button" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total-row"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+      <button class="btn btn-primary checkout-button" id="checkoutButton">Proceed to Checkout ↗</button>
+      <p class="cart-note">Demo checkout only. No payment will be collected.</p>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+sss
